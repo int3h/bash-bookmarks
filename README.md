@@ -19,36 +19,32 @@ A simple utility that allows you to easily save your current working diretory by
 
 ## Installation
 
-Put the bash-bookmarks.sh script somewhere on your system and add the following line to your ~/.bash_profile:
+Save bash-bookmarks.sh somewhere on your system and add the following line to your ~/.bash_profile:
 
     [[ -s ~/bash-bookmarks.sh ]] && . ~/bash-bookmarks.sh
 
-Change the path to the bash-bookmarks.sh script to reflect where you put it on your system. Clsoe and re-open your prompt and the bookmark commands should be available.
+Change the path to bash-bookmarks.sh to reflect its location on your system. Close and re-open Bash and the bookmark commands should be available.
 
 ## Usage
 
-* `bookmark name`: Create a new bookmark with the name *name* pointing to the current directory.
-* `showbookmarks`: Display a list of current bookmarks.
-* `rmbookmark name`: Deletes the bookmark with the name *name*.
+* `bookmark name`: Create a new bookmark named *name*, pointing to the current directory.
+* `showbookmarks`: List all bookmarks.
+* `rmbookmark name`: Delete the bookmark named *name*.
 
 ## Configuration
 
-By default, bookmarks are stored in ~/.bookmarks. You can change this setting the `$BOOKMARK_FILE` before bash-bookmarks.sh is first sourced, e.g. by adding the line `BOOKMARK_FILE=~/Documents/bash-bookmarks` to ~/.bash_profile before the above line.
+By default, bookmarks are stored in ~/.bookmarks. You can change this by setting the `$BOOKMARK_FILE` shell variable before bash-bookmarks.sh is first sourced, e.g. by adding the line `BOOKMARK_FILE=~/Documents/bash-bookmarks` to ~/.bash_profile before the `[[ -s ~/bash-bookmarks.sh ]] && . ~/bash-bookmarks.sh` line.
 
 Note that bookmarks aren't automatically transfered to any new file you specify, so if you want to keep existing bookmarks, you'll need to copy the old bookmark file to the new file.
 
-Note that if you change this value, is is *highly reccomended* to close and re-open your prompt. Otherwise, bookmarks from the old file will still be visible, yet all add/list/delete operations will happen over the new bookmark file.
+Note also that if you change this value, is is *highly reccomended* to close and re-open your prompt. Otherwise, bookmarks from the old file will still be visible, yet all add/list/delete operations will happen over the new bookmark file.
 
 ## Caveats
 
 All bookmark names must obey Bash variable naming rules: they must be one word, start with a letter or underscore, and contain only letters, numbers and underscores.
 
-If you delete the directory rerferenced by a bookmark, that bookmark will continue to exist, but will obviously produce and error if you try to `cd` to it. You can delete the bookmark itself with `rmbookmark`.
-
 You can only bookmark your current working directory. If there is demand, support may be added for bookmarking arbitrary directories.
 
-## License/Credit
+## Credit
 
-There are a number of similar utilities floating around the net. This was inspired by a page I've since lost, and adapated heavily for my use. If someone recognizes the original script, drop me a line so that I may credit them properly.
-
-This script is licensed with the OSI-approved BSD 2-Clause License. See the LICENSE file for more information.
+There are a number of similar utilities floating around the net. This one was inspired by a page I've since lost, and adapated heavily for my use. If you recognize the base script, drop me a line so that I may credit it properly.
