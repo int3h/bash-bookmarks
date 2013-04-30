@@ -46,3 +46,9 @@ All bookmark names must obey Bash variable naming rules: they must be one word, 
 If you delete the directory rerferenced by a bookmark, that bookmark will continue to exist, but will obviously produce and error if you try to `cd` to it. You can delete the bookmark itself with `rmbookmark`.
 
 You can only bookmark your current working directory. If there is demand, support may be added for bookmarking arbitrary directories.
+
+## License/Credit
+
+There are a number of similar utilities floating around the net. This was inspired by a page I've since lost, and adapated heavily for my use. If someone recognizes the original script, drop me a line so that I may credit them properly.
+
+This script is licensed with the OSI-approved BSD 2-Clause License. See the LICENSE file for more information.
